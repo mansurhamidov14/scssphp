@@ -2552,8 +2552,8 @@ class Compiler
      */
     protected function reduce($value, $inExp = false)
     {
-
-        switch ($value[0]) {
+        $switch = !empty($value) ? $value[0] : null;
+        switch ($switch) {
             case Type::T_EXPRESSION:
                 list(, $op, $left, $right, $inParens) = $value;
 
